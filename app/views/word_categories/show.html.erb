@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idword:</strong>
+  <%= @word_category.IDWord %>
+</p>
+
+<p>
+  <strong>Idcategory:</strong>
+  <%= @word_category.IDCategory %>
+</p>
+
+<%= link_to 'Edit', edit_word_category_path(@word_category) %> |
+<%= link_to 'Back', word_categories_path %>

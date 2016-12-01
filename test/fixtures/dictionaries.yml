@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IDDictionary: 1
+  IDUSer: 1
+  Name: MyString
+  IDSourceLanguage: 1
+  IDDestinationLanguage: 1
+
+two:
+  IDDictionary: 1
+  IDUSer: 1
+  Name: MyString
+  IDSourceLanguage: 1
+  IDDestinationLanguage: 1

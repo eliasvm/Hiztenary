@@ -1,0 +1,1 @@
+json.partial! "word_types/word_type", word_type: @word_type

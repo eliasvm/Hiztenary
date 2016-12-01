@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @word.Word %>
+</p>
+
+<p>
+  <strong>Translation:</strong>
+  <%= @word.Translation %>
+</p>
+
+<p>
+  <strong>Idwordtype:</strong>
+  <%= @word.IDWordType %>
+</p>
+
+<p>
+  <strong>Ipa:</strong>
+  <%= @word.IPA %>
+</p>
+
+<p>
+  <strong>Iddictionary:</strong>
+  <%= @word.IDDictionary %>
+</p>
+
+<p>
+  <strong>Iduser:</strong>
+  <%= @word.IDUser %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

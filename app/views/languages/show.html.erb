@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isocode:</strong>
+  <%= @language.ISOCode %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @language.Description %>
+</p>
+
+<%= link_to 'Edit', edit_language_path(@language) %> |
+<%= link_to 'Back', languages_path %>

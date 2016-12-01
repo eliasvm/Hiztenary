@@ -1,0 +1,1 @@
+json.array! @word_types, partial: 'word_types/word_type', as: :word_type

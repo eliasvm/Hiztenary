@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Word: MyString
+  Translation: MyString
+  IDWordType: 1
+  IPA: MyString
+  IDDictionary: 1
+  IDUser: 1
+
+two:
+  Word: MyString
+  Translation: MyString
+  IDWordType: 1
+  IPA: MyString
+  IDDictionary: 1
+  IDUser: 1

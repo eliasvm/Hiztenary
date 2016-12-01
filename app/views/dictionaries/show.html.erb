@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Iddictionary:</strong>
+  <%= @dictionary.IDDictionary %>
+</p>
+
+<p>
+  <strong>Iduser:</strong>
+  <%= @dictionary.IDUSer %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dictionary.Name %>
+</p>
+
+<p>
+  <strong>Idsourcelanguage:</strong>
+  <%= @dictionary.IDSourceLanguage %>
+</p>
+
+<p>
+  <strong>Iddestinationlanguage:</strong>
+  <%= @dictionary.IDDestinationLanguage %>
+</p>
+
+<%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
+<%= link_to 'Back', dictionaries_path %>

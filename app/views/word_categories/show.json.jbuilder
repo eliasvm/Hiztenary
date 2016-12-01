@@ -1,0 +1,1 @@
+json.partial! "word_categories/word_category", word_category: @word_category

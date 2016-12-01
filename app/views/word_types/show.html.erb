@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @word_type.Name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @word_type.Description %>
+</p>
+
+<%= link_to 'Edit', edit_word_type_path(@word_type) %> |
+<%= link_to 'Back', word_types_path %>
