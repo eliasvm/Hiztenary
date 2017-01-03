@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
+  
+  get 'admin' => 'admin#index'
+  controller :sessions do
+    get  'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  get "sessions/create"
+  get "sessions/destroy"
+  resources :sessions
+  resources :users
   resources :word_categories
   resources :words
   resources :dictionaries
   resources :word_types
-  resources :users
   resources :languages
   resources :categories
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
