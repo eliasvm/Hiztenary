@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :IDWordType %><br>
-    <%= f.number_field :IDWordType %>
+    <%= f.collection_select :IDWordType, WordType.order(:Name),:id,:Name, include_blank: true %>
+    <%-#= f.number_field :IDWordType -%> 
   </div>
   <div class="field">
     <%= f.label :IPA %><br>

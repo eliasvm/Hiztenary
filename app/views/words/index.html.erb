@@ -7,11 +7,11 @@
     <tr>
       <th>Word</th>
       <th>Translation</th>
-      <th>Idwordtype</th>
+      <th>Word Type</th>
       <th>Ipa</th>
-      <th>Iddictionary</th>
-      <th>Iduser</th>
-      <th colspan="3"></th>
+      <%-#<th>Iddictionary</th>-%>
+      <%-#<th>Iduser</th>-%>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -20,13 +20,10 @@
       <tr>
         <td><%= word.Word %></td>
         <td><%= word.Translation %></td>
-        <td><%= word.IDWordType %></td>
+        <td><%= WordType.find(word.IDWordType).Name %></td>        
         <td><%= word.IPA %></td>
-        <td><%= word.IDDictionary %></td>
-        <td><%= word.IDUser %></td>
-        <td><%= link_to 'Show', word %></td>
         <td><%= link_to 'Edit', edit_word_path(word) %></td>
-        <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to image_tag('trashcan.png'), word, method: :delete, data: { confirm: 'Are you sure?' } %> </td>       
       </tr>
     <% end %>
   </tbody>
