@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   
+  get 'main/index'
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get  'login' => :new
     post 'login' => :create
-    delete 'logout' => :destroy
+    get 'logout' => :destroy
   end
 
 
-  resources :sessions
+
   resources :users
   resources :word_categories
   resources :words
@@ -72,4 +74,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root 'main#index', as: 'main'
 end

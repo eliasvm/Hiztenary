@@ -4,8 +4,8 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = Word.all
-  end
+    @words = Word.select {|it| it.IDUser == @current_user.user_id}
+    end
 
   # GET /words/1
   # GET /words/1.json

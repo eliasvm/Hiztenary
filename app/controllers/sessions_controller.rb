@@ -7,7 +7,11 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
+      if user[:isAdmin] == true
       redirect_to admin_url
+      else 
+        redirect_to controller: 'words', action: 'index'
+      end
     else
       redirect_to login_url, alert: "Invalid user/password combination"
   end
