@@ -7,8 +7,7 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  get "sessions/create"
-  get "sessions/destroy"
+
   resources :sessions
   resources :users
   resources :word_categories
