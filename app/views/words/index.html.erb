@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<table class="table table-striped table-hover">
+<div>
+<%= link_to 'Add Word', new_word_path, {:class => "btn btn-primary"} %>
+<br/>
+<%= alphabetical_paginate @alphaParams %>
+</div>
+<br/>
+<div id="pagination_table" class="panel panel-default ">
+<table class="table table-striped table-hover ">
   <thead>
     <tr>
       <th>Word</th>
@@ -23,8 +29,14 @@
     <% end %>
   </tbody>
 </table>
+</div>
+<div>
+<%= alphabetical_paginate @alphaParams %>
+<br />
+<%= link_to 'Add Word', new_word_path, {:class => "btn btn-primary"} %>
+</div>
 
-<br>
 
-<%= link_to 'New Word', new_word_path %>
+
+
 

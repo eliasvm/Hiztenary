@@ -28,7 +28,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'node'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+#DataTables
+gem 'jquery-datatables-rails', '~> 3.4.0'
+#Alphabetical pagination
+gem 'alphabetical_paginate'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

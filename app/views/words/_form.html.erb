@@ -29,9 +29,8 @@
     <%= f.text_field :IPA %>
   </div>
   <div class="field">
-    <%= f.label :IDDictionary %><br>
-    <%= f.number_field :IDDictionary %>
-  </div>
+    <%= f.hidden_field :IDDictionary, value: 1 %><br>
+    </div>
   <div class="field">
     <%= f.hidden_field :IDUser, value: session[:user_id] %>
   </div>

@@ -4,7 +4,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = Word.select {|it| it.IDUser == session[:user_id]}
+    @words, @alphaParams = (Word.select{|it| it.IDUser == session[:user_id]}).alpha_paginate(params[:letter], {:bootstrap3 => true, :pagination_class => "pagination"}) {|it| it.Word}
     end
 
   # GET /words/1
@@ -28,8 +28,8 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.save
-        format.html { redirect_to @word, notice: 'Word was successfully created.' }
-        format.json { render :show, status: :created, location: @word }
+        format.html { redirect_to words_url, notice: 'Word was successfully created.' }
+        format.json { render :index, status: :created, location: @word }
       else
         format.html { render :new }
         format.json { render json: @word.errors, status: :unprocessable_entity }
