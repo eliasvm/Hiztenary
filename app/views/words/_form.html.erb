@@ -33,8 +33,7 @@
     <%= f.number_field :IDDictionary %>
   </div>
   <div class="field">
-    <%= f.label :IDUser %><br>
-    <%= f.number_field :IDUser %>
+    <%= f.hidden_field :IDUser, value: session[:user_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

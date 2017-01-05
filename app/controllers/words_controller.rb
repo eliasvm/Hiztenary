@@ -4,7 +4,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = Word.select {|it| it.IDUser == @current_user.user_id}
+    @words = Word.select {|it| it.IDUser == session[:user_id]}
     end
 
   # GET /words/1
@@ -42,8 +42,8 @@ class WordsController < ApplicationController
   def update
     respond_to do |format|
       if @word.update(word_params)
-        format.html { redirect_to @word, notice: 'Word was successfully updated.' }
-        format.json { render :show, status: :ok, location: @word }
+        format.html { redirect_to words_url, notice: 'Word was successfully updated.' }
+        format.json { render :index, status: :ok, location: @word }
       else
         format.html { render :edit }
         format.json { render json: @word.errors, status: :unprocessable_entity }
