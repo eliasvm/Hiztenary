@@ -17,6 +17,7 @@
 #  password: patamon
 
 development:
+  adapter: postgresql
   host: ec2-54-217-213-203.eu-west-1.compute.amazonaws.com
   port: 5432
   database: d1l34vrjp3f67g
