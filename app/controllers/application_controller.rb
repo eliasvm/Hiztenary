@@ -8,5 +8,7 @@ class ApplicationController < ActionController::Base
     unless User.find_by(id: session[:user_id])
       redirect_to main_url, notice: "Please log in"
      end
+     @categories = Category.all
+     @word_types = WordType.all
   end
 end
